@@ -20,7 +20,7 @@
 
 /* Tabs styling */
 .tabs {
-    margin-bottom: -1px !important;
+    margin-bottom: 0px;
     position: relative;
 }
 
