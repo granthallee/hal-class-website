@@ -4,15 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Putting History Before Us - because history matters</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Putting History Before Us - A comprehensive history blog exploring World History and US History, because history matters.">
+    <meta name="keywords" content="history, world history, US history, medieval history, ancient Rome, renaissance, American history">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Putting History Before Us">
+    <meta property="og:description" content="because history matters - Explore World and US History">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Putting History Before Us",
+        "description": "because history matters - A blog about World and US History",
+        "url": "https://yourusername.github.io",
+        "author": {
+            "@type": "Person",
+            "name": "Your Name"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar is-dark">
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="#">
+            <a class="navbar-item" href="index.html">
                 <strong class="has-text-white">Putting History Before Us</strong>
             </a>
         </div>
@@ -42,25 +70,308 @@
         </div>
     </div>
 
-    <!-- Content Container -->
-    <div id="content-container" class="container">
-        <!-- Dynamically generated -->
+    <!-- WORLD HISTORY SECTION -->
+    <div id="world-history" class="tab-pane is-active">
+        <div class="tab-content">
+            <!-- World History Sub-tabs -->
+            <div class="tabs is-toggle is-centered is-small" id="world-subnav">
+                <ul>
+                    <li class="is-active" id="rome-tab" data-target="rome"><a>Fall of Rome</a></li>
+                    <li id="islam-tab" data-target="islam"><a>Islam</a></li>
+                    <li id="africa-tab" data-target="africa"><a>Medieval West Africa</a></li>
+                    <li id="china-tab" data-target="china"><a>Medieval China</a></li>
+                    <li id="japan-tab" data-target="japan"><a>Medieval Japan</a></li>
+                    <li id="europe-tab" data-target="europe"><a>Medieval Europe</a></li>
+                    <li id="renaissance-tab" data-target="renaissance"><a>Renaissance</a></li>
+                    <li id="reformation-tab" data-target="reformation"><a>Reformation</a></li>
+                    <li id="india-tab" data-target="india"><a>Medieval India</a></li>
+                    <li id="america-tab" data-target="america"><a>Medieval America</a></li>
+                </ul>
+            </div>
+
+            <!-- Fall of Rome -->
+            <div id="rome" class="subtab-pane is-active">
+                <h2 class="title is-3 is-spaced mb-4">Fall of Rome</h2>
+                <div class="posts-container">
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/rome/split-of-rome.html">The Split of Rome into East and West</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-01">January 1, 2024</time>
+                            <p class="excerpt">The division of the Roman Empire marked a crucial turning point...</p>
+                            <a href="posts/rome/split-of-rome.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/rome/barbarian-invasions.html">Barbarian Invasions</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-02">January 2, 2024</time>
+                            <p class="excerpt">The peoples who pressured Rome's borders...</p>
+                            <a href="posts/rome/barbarian-invasions.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Add more posts here -->
+                </div>
+            </div>
+
+            <!-- Islam -->
+            <div id="islam" class="subtab-pane">
+                <h2 class="title is-3 is-spaced mb-4">Islam</h2>
+                <div class="posts-container">
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/islam/life-of-muhammad.html">The Life of Muhammad</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-03">January 3, 2024</time>
+                            <p class="excerpt">The prophet who founded one of the world's major religions...</p>
+                            <a href="posts/islam/life-of-muhammad.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Add more posts -->
+                </div>
+            </div>
+
+            <!-- Medieval West Africa -->
+            <div id="africa" class="subtab-pane">
+                <h2 class="title is-3 is-spaced mb-4">Medieval West Africa</h2>
+                <div class="posts-container">
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/africa/mali-empire.html">The Mali Empire</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-04">January 4, 2024</time>
+                            <p class="excerpt">The wealthy empire of West Africa...</p>
+                            <a href="posts/africa/mali-empire.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Add more posts -->
+                </div>
+            </div>
+
+            <!-- Medieval China -->
+            <div id="china" class="subtab-pane">
+                <h2 class="title is-3 is-spaced mb-4">Medieval China</h2>
+                <div class="posts-container">
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/china/tang-dynasty.html">The Tang Dynasty</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-05">January 5, 2024</time>
+                            <p class="excerpt">China's golden age of poetry and art...</p>
+                            <a href="posts/china/tang-dynasty.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Add more posts -->
+                </div>
+            </div>
+
+            <!-- Medieval Japan -->
+            <div id="japan" class="subtab-pane">
+                <h2 class="title is-3 is-spaced mb-4">Medieval Japan</h2>
+                <div class="posts-container">
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/japan/samurai.html">The Samurai Class</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-06">January 6, 2024</time>
+                            <p class="excerpt">The warrior class that defined medieval Japan...</p>
+                            <a href="posts/japan/samurai.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Add more posts -->
+                </div>
+            </div>
+
+            <!-- Medieval Europe -->
+            <div id="europe" class="subtab-pane">
+                <h2 class="title is-3 is-spaced mb-4">Medieval Europe</h2>
+                <div class="posts-container">
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/europe/feudalism.html">The Feudal System</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-07">January 7, 2024</time>
+                            <p class="excerpt">The social structure of medieval Europe...</p>
+                            <a href="posts/europe/feudalism.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Add more posts -->
+                </div>
+            </div>
+
+            <!-- Renaissance -->
+            <div id="renaissance" class="subtab-pane">
+                <h2 class="title is-3 is-spaced mb-4">Renaissance</h2>
+                <div class="posts-container">
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/renaissance/italian-renaissance.html">The Italian Renaissance</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-08">January 8, 2024</time>
+                            <p class="excerpt">The rebirth of art and learning in Italy...</p>
+                            <a href="posts/renaissance/italian-renaissance.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Add more posts -->
+                </div>
+            </div>
+
+            <!-- Reformation -->
+            <div id="reformation" class="subtab-pane">
+                <h2 class="title is-3 is-spaced mb-4">Reformation</h2>
+                <div class="posts-container">
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/reformation/martin-luther.html">Martin Luther</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-09">January 9, 2024</time>
+                            <p class="excerpt">The monk who challenged the Catholic Church...</p>
+                            <a href="posts/reformation/martin-luther.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Add more posts -->
+                </div>
+            </div>
+
+            <!-- Medieval India -->
+            <div id="india" class="subtab-pane">
+                <h2 class="title is-3 is-spaced mb-4">Medieval India</h2>
+                <div class="posts-container">
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/india/mughal-empire.html">The Mughal Empire</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-10">January 10, 2024</time>
+                            <p class="excerpt">The empire that ruled much of India...</p>
+                            <a href="posts/india/mughal-empire.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Add more posts -->
+                </div>
+            </div>
+
+            <!-- Medieval America -->
+            <div id="america" class="subtab-pane">
+                <h2 class="title is-3 is-spaced mb-4">Medieval America</h2>
+                <div class="posts-container">
+                    <article class="card post-card">
+                        <div class="card-content">
+                            <h3 class="title is-5 is-spaced">
+                                <a href="posts/america/maya-civilization.html">The Maya Civilization</a>
+                            </h3>
+                            <time class="subtitle is-6" datetime="2024-01-11">January 11, 2024</time>
+                            <p class="excerpt">The advanced civilization of Mesoamerica...</p>
+                            <a href="posts/america/maya-civilization.html" class="button is-small is-primary mt-3">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Add more posts -->
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Modal Container -->
-    <div id="post-modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title" id="modal-title">Post Title</p>
-                <button class="delete" aria-label="close" onclick="closeModal()"></button>
-            </header>
-            <section class="modal-card-body" id="modal-content">
-                <!-- Post content loads here -->
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button" onclick="closeModal()">Close</button>
-            </footer>
+    <!-- US HISTORY SECTION -->
+    <div id="us-history" class="tab-pane">
+        <div class="tab-content">
+            <!-- US History Sub-tabs -->
+            <div class="tabs is-toggle is-centered is-small" id="us-subnav">
+                <ul>
+                    <li class="is-active" id="indigenous-tab" data-target="indigenous"><a>Indigenous People</a></li>
+                    <li id="colonial-tab" data-target="colonial"><a>Colonial America</a></li>
+                    <li id="constitution-tab" data-target="constitution"><a>Articles to Constitution</a></li>
+                    <li id="jefferson-tab" data-target="jefferson"><a>Jefferson & Jackson</a></li>
+                    <li id="westward-tab" data-target="westward"><a>Westward Expansion</a></li>
+                    <li id="enslavement-tab" data-target="enslavement"><a>Enslavement</a></li>
+                    <li id="crisis-tab" data-target="crisis"><a>Crisis of 1850s</a></li>
+                    <li id="reconstruction-tab" data-target="reconstruction"><a>Reconstruction</a></li>
+                    <li id="gilded-tab" data-target="gilded"><a>Gilded Age</a></li>
+                </ul>
+            </div>
+
+            <!-- Coming Soon sections -->
+            <div id="indigenous" class="subtab-pane is-active">
+                <div class="coming-soon">
+                    <span class="icon is-large"><i class="fas fa-hourglass-half fa-3x"></i></span>
+                    <h2 class="title is-3 is-spaced mt-4">Coming Soon</h2>
+                    <p class="subtitle is-5">Content for Indigenous People will be added in the future.</p>
+                </div>
+            </div>
+
+            <div id="colonial" class="subtab-pane">
+                <div class="coming-soon">
+                    <span class="icon is-large"><i class="fas fa-hourglass-half fa-3x"></i></span>
+                    <h2 class="title is-3 is-spaced mt-4">Coming Soon</h2>
+                    <p class="subtitle is-5">Content for Colonial America will be added in the future.</p>
+                </div>
+            </div>
+
+            <div id="constitution" class="subtab-pane">
+                <div class="coming-soon">
+                    <span class="icon is-large"><i class="fas fa-hourglass-half fa-3x"></i></span>
+                    <h2 class="title is-3 is-spaced mt-4">Coming Soon</h2>
+                    <p class="subtitle is-5">Content for Articles to Constitution will be added in the future.</p>
+                </div>
+            </div>
+
+            <div id="jefferson" class="subtab-pane">
+                <div class="coming-soon">
+                    <span class="icon is-large"><i class="fas fa-hourglass-half fa-3x"></i></span>
+                    <h2 class="title is-3 is-spaced mt-4">Coming Soon</h2>
+                    <p class="subtitle is-5">Content for Jefferson & Jackson will be added in the future.</p>
+                </div>
+            </div>
+
+            <div id="westward" class="subtab-pane">
+                <div class="coming-soon">
+                    <span class="icon is-large"><i class="fas fa-hourglass-half fa-3x"></i></span>
+                    <h2 class="title is-3 is-spaced mt-4">Coming Soon</h2>
+                    <p class="subtitle is-5">Content for Westward Expansion will be added in the future.</p>
+                </div>
+            </div>
+
+            <div id="enslavement" class="subtab-pane">
+                <div class="coming-soon">
+                    <span class="icon is-large"><i class="fas fa-hourglass-half fa-3x"></i></span>
+                    <h2 class="title is-3 is-spaced mt-4">Coming Soon</h2>
+                    <p class="subtitle is-5">Content for Enslavement will be added in the future.</p>
+                </div>
+            </div>
+
+            <div id="crisis" class="subtab-pane">
+                <div class="coming-soon">
+                    <span class="icon is-large"><i class="fas fa-hourglass-half fa-3x"></i></span>
+                    <h2 class="title is-3 is-spaced mt-4">Coming Soon</h2>
+                    <p class="subtitle is-5">Content for Crisis of 1850s will be added in the future.</p>
+                </div>
+            </div>
+
+            <div id="reconstruction" class="subtab-pane">
+                <div class="coming-soon">
+                    <span class="icon is-large"><i class="fas fa-hourglass-half fa-3x"></i></span>
+                    <h2 class="title is-3 is-spaced mt-4">Coming Soon</h2>
+                    <p class="subtitle is-5">Content for Reconstruction will be added in the future.</p>
+                </div>
+            </div>
+
+            <div id="gilded" class="subtab-pane">
+                <div class="coming-soon">
+                    <span class="icon is-large"><i class="fas fa-hourglass-half fa-3x"></i></span>
+                    <h2 class="title is-3 is-spaced mt-4">Coming Soon</h2>
+                    <p class="subtitle is-5">Content for Gilded Age will be added in the future.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -70,7 +381,6 @@
         </div>
     </footer>
 
-    <script src="content/blog-content.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
