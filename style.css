@@ -240,4 +240,9 @@
         break-inside: avoid;
         margin-bottom: 1rem;
     }
+
+    /* Fix negative margin between title and subtitle */
+    .title:not(.is-spaced)+.subtitle {
+    margin-top: 0 !important;
+}
 }
