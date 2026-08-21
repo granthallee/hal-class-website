@@ -61,32 +61,3 @@ function toggleSubTab(subnavId, selectedNav, targetId) {
 // Initialize sub-tabs
 setupSubTabs("world-subnav");
 setupSubTabs("us-subnav");
-
-// Ensure first sub-tab is active in each section
-function initializeDefaultSubTabs() {
-    // World History first sub-tab
-    const worldFirstTab = document.querySelector('#world-subnav li[data-target="rome"]');
-    if (worldFirstTab) {
-        worldFirstTab.click();
-    }
-    
-    // US History first sub-tab
-    const usFirstTab = document.querySelector('#us-subnav li[data-target="revolution"]');
-    if (usFirstTab) {
-        usFirstTab.click();
-    }
-}
-
-// Run initialization when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    initializeDefaultSubTabs();
-});
-
-// Optional: Add keyboard navigation
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.key === '1') {
-        document.querySelector('#world-tab').click();
-    } else if (e.ctrlKey && e.key === '2') {
-        document.querySelector('#us-tab').click();
-    }
-});
