@@ -241,8 +241,28 @@
         margin-bottom: 1rem;
     }
 
-    /* Fix negative margin between title and subtitle */
-    .title:not(.is-spaced)+.subtitle {
-    margin-top: 0 !important;
+    
+
+    /* .hero-body {
+        position: relative;
+        z-index: 1;
+    } */
+
 }
+
+.hero.has-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-background.is-transparent {
+    opacity: 0.3;
 }
