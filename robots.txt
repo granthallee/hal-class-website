@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: past-before.us/sitemap.xml
