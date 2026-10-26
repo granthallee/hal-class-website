@@ -79,32 +79,33 @@
     <!-- JAVASCRIPT TO CYCLE IMAGES -->
     <script>
         // Using the exact filenames from your screenshots and the ../../../ relative path
+                // Using absolute root paths (starting with /) to avoid 404 errors
         const images = [
             // Rome (Numbered)
-            { src: '../../../posts/rome/img/1-1.png', caption: 'Rome Archive: Slide 1' },
-            { src: '../../../posts/rome/img/1-2.png', caption: 'Rome Archive: Slide 2' },
-            { src: '../../../posts/rome/img/2-1.png', caption: 'Rome Archive: Slide 4' },
-            { src: '../../../posts/rome/img/3-1.png', caption: 'Rome Archive: Slide 5' },
-            { src: '../../../posts/rome/img/4-2.png', caption: 'Rome Archive: Slide 7' },
-            { src: '../../../posts/rome/img/actium.jpg', caption: 'The Battle of Actium' },
+            { src: '/posts/rome/img/1-1.png', caption: 'Rome Archive: Slide 1' },
+            { src: '/posts/rome/img/1-2.png', caption: 'Rome Archive: Slide 2' },
+            { src: '/posts/rome/img/2-1.png', caption: 'Rome Archive: Slide 4' },
+            { src: '/posts/rome/img/3-1.png', caption: 'Rome Archive: Slide 5' },
+            { src: '/posts/rome/img/4-2.png', caption: 'Rome Archive: Slide 7' },
+            { src: '/posts/rome/img/actium.jpg', caption: 'The Battle of Actium' },
             
             // Africa / Sahel (Named)
-            { src: '../../../posts/africa/img/ac-big.png', caption: 'African History Archive: Map' },
-            { src: '../../../posts/africa/img/colonialmap.png', caption: 'Colonial Map of Africa' },
-            { src: '../../../posts/africa/img/g-statue.png', caption: 'Ghana Empire Statue' },
-            { src: '../../../posts/africa/img/lion-king.png', caption: 'Sundiata Keita (The Lion King)' },
-            { src: '../../../posts/africa/img/m-mosque.png', caption: 'Mali Empire Mosque' },
-            { src: '../../../posts/africa/img/mm-hajj.png', caption: "Mansa Musa's Hajj" },
-            { src: '../../../posts/africa/img/songhai.png', caption: 'The Songhai Empire' },
+            { src: '/posts/africa/img/ac-big.png', caption: 'African History Archive: Map' },
+            { src: '/posts/africa/img/colonialmap.png', caption: 'Colonial Map of Africa' },
+            { src: '/posts/africa/img/g-statue.png', caption: 'Ghana Empire Statue' },
+            { src: '/posts/africa/img/lion-king.png', caption: 'Sundiata Keita (The Lion King)' },
+            { src: '/posts/africa/img/m-mosque.png', caption: 'Mali Empire Mosque' },
+            { src: '/posts/africa/img/mm-hajj.png', caption: "Mansa Musa's Hajj" },
+            { src: '/posts/africa/img/songhai.png', caption: 'The Songhai Empire' },
             
             // Islam (Named)
-            { src: '../../../posts/islam/img/angel.png', caption: 'Islamic Beliefs: Angels' },
-            { src: '../../../posts/islam/img/arab-map.png', caption: 'Map of Arabia' },
-            { src: '../../../posts/islam/img/kaaba.png', caption: 'The Kaaba' },
-            { src: '../../../posts/islam/img/mary.png', caption: 'Islamic Art: Mary' },
-            { src: '../../../posts/islam/img/mosque.png', caption: 'A Mosque' },
-            { src: '../../../posts/islam/img/persian-map.png', caption: 'Map of the Persian Empire' },
-            { src: '../../../posts/islam/img/roman-map.png', caption: 'Map of the Roman Empire' }
+            { src: '/posts/islam/img/angel.png', caption: 'Islamic Beliefs: Angels' },
+            { src: '/posts/islam/img/arab-map.png', caption: 'Map of Arabia' },
+            { src: '/posts/islam/img/kaaba.png', caption: 'The Kaaba' },
+            { src: '/posts/islam/img/mary.png', caption: 'Islamic Art: Mary' },
+            { src: '/posts/islam/img/mosque.png', caption: 'A Mosque' },
+            { src: '/posts/islam/img/persian-map.png', caption: 'Map of the Persian Empire' },
+            { src: '/posts/islam/img/roman-map.png', caption: 'Map of the Roman Empire' }
         ];
 
         let currentIndex = 0;
