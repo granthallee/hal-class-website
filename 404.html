@@ -1,39 +1,44 @@
 <!DOCTYPE html>
+
 <html class="theme-light">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>404 - Page Not Found | Putting the Past Before Us</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/black/icons8-book-ios-27-outlined-32.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <!-- Bulma Version 1-->
-    <link rel="stylesheet" href="https://unpkg.com/bulma@1.0.4/css/bulma.min.css">
-    <style>
-        /* Smooth crossfade for the image */
-        #cycling-image {
-            transition: opacity 0.5s ease-in-out;
-            object-fit: contain;
-            width: 100%;
-            height: 100%;
-            background-color: #f5f5f5; /* Light background for transparent images */
-        }
-        .image.is-16by9 {
-            background-color: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>404 - Page Not Found | Putting the Past Before Us</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../images/icons/black/icons8-book-ios-27-outlined-32.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <!-- Bulma Version 1-->
+        <link rel="stylesheet" href="https://unpkg.com/bulma@1.0.4/css/bulma.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/blog.css">
+        <script data-goatcounter="https://pastbeforeus.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+
+        <style>
+            /* Smooth crossfade for the image */
+            #cycling-image {
+                transition: opacity 0.5s ease-in-out;
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+                background-color: #f5f5f5; /* Light background for transparent images */
+            }
+            .image.is-16by9 {
+                background-color: #f5f5f5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
 </head>
 
 <body>
     <!-- START NAV -->
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <img src="images/icons/white/icons8-book-ios-27-outlined-96.png" alt="Book Icon">
+            <a class="navbar-item" href="../../../index.html">
+                <img src="../../../images/icons/white/icons8-book-ios-27-outlined-96.png" alt="Book Icon">
                 <strong class="has-text-white">Putting the Past Before Us</strong>
             </a>
         </div>
@@ -47,7 +52,7 @@
                 <h1 class="title is-1">404</h1>
                 <h2 class="subtitle is-3">You've wandered off the map</h2>
                 <p class="is-size-5 mt-4">We couldn't find the page you were looking for. Here are some artifacts from our archives while you find your way back.</p>
-                <a href="index.html" class="button is-dark is-large mt-5">Return Home</a>
+                <a href="../../../index.html" class="button is-dark is-large mt-5">Return Home</a>
             </div>
         </div>
     </section>
@@ -73,22 +78,33 @@
 
     <!-- JAVASCRIPT TO CYCLE IMAGES -->
     <script>
-        // Images pulled from your Rome, Islam, and Sahel/West Africa units
+        // Using the exact filenames from your screenshots and the ../../../ relative path
         const images = [
-            // Rome
-            { src: 'posts/rome/img/caesar.png', caption: 'The Death of Caesar' },
-            { src: 'posts/rome/img/triumvirate_map.png', caption: 'The Second Triumvirate' },
-            { src: 'posts/rome/img/colosseum.png', caption: 'The Colosseum' },
+            // Rome (Numbered)
+            { src: '../../../posts/rome/img/1-1.png', caption: 'Rome Archive: Slide 1' },
+            { src: '../../../posts/rome/img/1-2.png', caption: 'Rome Archive: Slide 2' },
+            { src: '../../../posts/rome/img/2-1.png', caption: 'Rome Archive: Slide 4' },
+            { src: '../../../posts/rome/img/3-1.png', caption: 'Rome Archive: Slide 5' },
+            { src: '../../../posts/rome/img/4-2.png', caption: 'Rome Archive: Slide 7' },
+            { src: '../../../posts/rome/img/actium.jpg', caption: 'The Battle of Actium' },
             
-            // Islam
-            { src: 'posts/islam/img/kaaba.png', caption: 'The Kaaba in Mecca' },
-            { src: 'posts/islam/img/mansa_musa.png', caption: 'Mansa Musa, the richest man in history?' },
-            { src: 'posts/islam/img/catalan_atlas.png', caption: 'The Catalan Atlas' },
+            // Africa / Sahel (Named)
+            { src: '../../../posts/africa/img/ac-big.png', caption: 'African History Archive: Map' },
+            { src: '../../../posts/africa/img/colonialmap.png', caption: 'Colonial Map of Africa' },
+            { src: '../../../posts/africa/img/g-statue.png', caption: 'Ghana Empire Statue' },
+            { src: '../../../posts/africa/img/lion-king.png', caption: 'Sundiata Keita (The Lion King)' },
+            { src: '../../../posts/africa/img/m-mosque.png', caption: 'Mali Empire Mosque' },
+            { src: '../../../posts/africa/img/mm-hajj.png', caption: "Mansa Musa's Hajj" },
+            { src: '../../../posts/africa/img/songhai.png', caption: 'The Songhai Empire' },
             
-            // Sahel / West Africa
-            { src: 'posts/sahel/img/ghana_statue.png', caption: 'The Empire of Ghana' },
-            { src: 'posts/sahel/img/mali_mosque.png', caption: 'Mud-brick architecture of the Mali Empire' },
-            { src: 'posts/sahel/img/battle_tondibi.png', caption: 'The Battle of Tondibi (1591)' }
+            // Islam (Named)
+            { src: '../../../posts/islam/img/angel.png', caption: 'Islamic Beliefs: Angels' },
+            { src: '../../../posts/islam/img/arab-map.png', caption: 'Map of Arabia' },
+            { src: '../../../posts/islam/img/kaaba.png', caption: 'The Kaaba' },
+            { src: '../../../posts/islam/img/mary.png', caption: 'Islamic Art: Mary' },
+            { src: '../../../posts/islam/img/mosque.png', caption: 'A Mosque' },
+            { src: '../../../posts/islam/img/persian-map.png', caption: 'Map of the Persian Empire' },
+            { src: '../../../posts/islam/img/roman-map.png', caption: 'Map of the Roman Empire' }
         ];
 
         let currentIndex = 0;
