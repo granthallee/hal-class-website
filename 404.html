@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="theme-light">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 - Page Not Found | Putting the Past Before Us</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/black/icons8-book-ios-27-outlined-32.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 1-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@1.0.4/css/bulma.min.css">
+    <style>
+        /* Smooth crossfade for the image */
+        #cycling-image {
+            transition: opacity 0.5s ease-in-out;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            background-color: #f5f5f5; /* Light background for transparent images */
+        }
+        .image.is-16by9 {
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- START NAV -->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="images/icons/white/icons8-book-ios-27-outlined-96.png" alt="Book Icon">
+                <strong class="has-text-white">Putting the Past Before Us</strong>
+            </a>
+        </div>
+    </nav>
+    <!-- END NAV -->
+
+    <!-- HERO SECTION -->
+    <section class="hero is-info is-medium is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">404</h1>
+                <h2 class="subtitle is-3">You've wandered off the map</h2>
+                <p class="is-size-5 mt-4">We couldn't find the page you were looking for. Here are some artifacts from our archives while you find your way back.</p>
+                <a href="index.html" class="button is-dark is-large mt-5">Return Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMAGE CYCLER SECTION -->
+    <div class="container mt-6 mb-6">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-16by9">
+                            <!-- The source starts empty to prevent broken icon flash -->
+                            <img id="cycling-image" src="" alt="Historical artifact" style="opacity: 0;">
+                        </figure>
+                    </div>
+                    <div class="card-content has-text-centered">
+                        <p class="title is-5" id="image-caption">Loading archive...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT TO CYCLE IMAGES -->
+    <script>
+        // Images pulled from your Rome, Islam, and Sahel/West Africa units
+        const images = [
+            // Rome
+            { src: 'posts/rome/img/caesar.png', caption: 'The Death of Caesar' },
+            { src: 'posts/rome/img/triumvirate_map.png', caption: 'The Second Triumvirate' },
+            { src: 'posts/rome/img/colosseum.png', caption: 'The Colosseum' },
+            
+            // Islam
+            { src: 'posts/islam/img/kaaba.png', caption: 'The Kaaba in Mecca' },
+            { src: 'posts/islam/img/mansa_musa.png', caption: 'Mansa Musa, the richest man in history?' },
+            { src: 'posts/islam/img/catalan_atlas.png', caption: 'The Catalan Atlas' },
+            
+            // Sahel / West Africa
+            { src: 'posts/sahel/img/ghana_statue.png', caption: 'The Empire of Ghana' },
+            { src: 'posts/sahel/img/mali_mosque.png', caption: 'Mud-brick architecture of the Mali Empire' },
+            { src: 'posts/sahel/img/battle_tondibi.png', caption: 'The Battle of Tondibi (1591)' }
+        ];
+
+        let currentIndex = 0;
+        const imageElement = document.getElementById('cycling-image');
+        const captionElement = document.getElementById('image-caption');
+
+        // Preload images to prevent blinking when they swap
+        images.forEach(img => {
+            const preload = new Image();
+            preload.src = img.src;
+        });
+
+        function updateImage() {
+            // Fade out
+            imageElement.style.opacity = 0;
+
+            setTimeout(() => {
+                // Update source and caption while hidden
+                imageElement.src = images[currentIndex].src;
+                imageElement.alt = images[currentIndex].caption;
+                captionElement.textContent = images[currentIndex].caption;
+
+                // Fade in
+                imageElement.style.opacity = 1;
+
+                // Move to next image, loop back to start if at the end
+                currentIndex = (currentIndex + 1) % images.length;
+            }, 500); // Wait 500ms for the fade-out transition to finish
+        }
+
+        // Show the first image immediately
+        setTimeout(updateImage, 100);
+
+        // Change the image every 5 seconds (5000 milliseconds)
+        setInterval(updateImage, 5000);
+    </script>
+
+</body>
+</html>
